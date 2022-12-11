@@ -9,6 +9,8 @@ class modeller extends Model
 {
     use HasFactory;
 
+    
+     
     protected $fillable = ['name','email'];
     
     public function getDetail()

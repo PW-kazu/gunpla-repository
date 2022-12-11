@@ -6,11 +6,14 @@ use App\Models\Modeller;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ModellerFactory extends Factory
+
+
 {
     protected $model = Modeller::class;
     /**
      * Define the model's default state.
-     *
+     *@var string
+
      * @return array
      */
     public function definition()
@@ -23,7 +26,7 @@ class ModellerFactory extends Factory
             'prefecture' => $this->faker->state,
             'address' => $this->faker->address,
             'tel' => $this->faker->phoneNumber,
-
+            
         ];
     }
 }

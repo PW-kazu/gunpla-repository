@@ -22,11 +22,10 @@ class CreateModelersTable extends Migration
             $table->string('prefecture', 40)->comment('都道府県名 フリーテキスト検索で使用');
 		    $table->string('address')->comment('住所2');
 		    $table->string('tel', 20)->nullable()->comment('電話番号');
-            $table->timestamp('created_at')->userCurrent()->nullable();
+            $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
-
     /**
      * Reverse the migrations.
      *
