@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Modeller extends Model
+class modeller extends Model
 {
     use HasFactory;
 
@@ -16,7 +16,7 @@ class Modeller extends Model
         $txt = 'ID:'.$this->id . '' . $this->name . $this->email . $this->password . $this->zip . $this->prefecture . $this->address . $this->tel;
     }
 
-    public function modellerss()
+    public function modellers()
     {
         return $this->hasMany('App\Models\Modeller');
     }

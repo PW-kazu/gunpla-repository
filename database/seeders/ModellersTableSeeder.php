@@ -4,10 +4,10 @@ namespace Database\Seeders;
 
 
 use Illuminate\Database\Seeder;
-use Illiminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\Modeller;
 
-class ModelersTableSeeder extends Seeder
+class ModellersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

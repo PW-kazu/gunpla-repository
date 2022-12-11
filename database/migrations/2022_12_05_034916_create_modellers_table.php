@@ -13,7 +13,7 @@ class CreateModelersTable extends Migration
      */
     public function up()
     {
-        Schema::create('modelers', function (Blueprint $table) {
+        Schema::create('modellers', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100)->comment('名前');
             $table->string('email')->unique('email')->comment('メールアドレス');
@@ -34,6 +34,6 @@ class CreateModelersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modelers');
+        Schema::dropIfExists('modellers');
     }
 }
