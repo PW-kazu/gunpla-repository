@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\Modeller;
 
-class ModellersTablleSeeder extends Seeder
+class ModellersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,6 +16,6 @@ class ModellersTablleSeeder extends Seeder
      */
     public function run()
     {
-        Modeller::factory()->count(3)->create();
+        Modeller::factory()->count(100)->create();
     }
 }
