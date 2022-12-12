@@ -26,7 +26,7 @@ class ModellerFactory extends Factory
             'prefecture' => $this->faker->state,
             'address' => $this->faker->address,
             'tel' => $this->faker->phoneNumber,
-            
+
         ];
     }
 }
