@@ -9,7 +9,7 @@ class modeller extends Model
 {
     use HasFactory;
     
-    
+    protected $table = "modeller";
     protected $fillable = ['name','email'];
     
     public function getDetail()
@@ -21,6 +21,14 @@ class modeller extends Model
     public function modellers()
     {
         return $this->hasMany('App\Models\Modeller');
+    }
+
+    public function InsertRegister($request)
+    {
+        
+        return $this->create([
+            'register'=> $request->register,
+        ]);
     }
 
 }

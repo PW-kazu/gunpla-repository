@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ModellerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +13,17 @@ use App\Http\Controllers\ModellerController;
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
 Route::get('/', [ModellerController::class,'index']);
+Route::post('/', [ModellerController::class, 'post']);
+Route::get('/register', [RegisterController::class,'register'])->name('modeller.register');
+Route::post('/store', [RegisterController::class,'store'])->name('modeller.store');
