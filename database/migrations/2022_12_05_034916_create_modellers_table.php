@@ -14,7 +14,7 @@ class CreateModellersTable extends Migration
     public function up()
     {
         Schema::create('modeller', function (Blueprint $table) {
-            $table->id();
+            $table->id('modeller_id');
             $table->string('name', 100)->comment('名前');
             $table->string('email')->unique('email')->comment('メールアドレス');
             $table->string('password')->comment('パスワード');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use app\Models\Modeler;
 use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -20,6 +21,11 @@ class RegisterController extends Controller
         return view('register', compact('registers'));
     }
 
+    public function post(ClientRequest $request)
+    {
+    return view('register', ['txt' => '正しい入力です']);
+    }
+
     public function create(Request $request)
     {        
         return view('register');
@@ -33,5 +39,5 @@ class RegisterController extends Controller
 
     
 
-   
+    
 }

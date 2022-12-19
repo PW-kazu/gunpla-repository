@@ -6,6 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  .form-group{
+    width: 100%;
+    height: 1200px;
+    background: linear-gradient(#ff34ff, #8646ff);
+  }
+  .name{
+    left
+  }
+  .email{
+    left
+  }
+  .password{
+    left
+  }
+  .zip{
+    left
+  }
+  .prefecture{
+    left
+  }
+  .address{
+    left
+  }
+  .te{
+    left
+  }
+</style>
 <body>
   <h1>会員登録</h1>
   <form action="{{ route('modeller.store')}}">
@@ -36,7 +64,7 @@
           <input type="text" name="prefecture" id="prefecture">
         </div>
         <div class="tel">
-          <label for="tel">住所:<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
+          <label for="tel">電話番号:<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
           <input type="tel" name="tel" id="tel">
         </div>
         <div>

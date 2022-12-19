@@ -20,7 +20,7 @@ class modeller extends Model
 
     public function modellers()
     {
-        return $this->hasMany('App\Models\Modeller');
+        return $this->hasMany('App\Models\Display');
     }
 
     public function InsertRegister($request)
@@ -30,5 +30,7 @@ class modeller extends Model
             'register'=> $request->register,
         ]);
     }
+
+
 
 }

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DisplayController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,15 @@ Route::get('/', [ModellerController::class,'index']);
 Route::post('/', [ModellerController::class, 'post']);
 Route::get('/register', [RegisterController::class,'register'])->name('modeller.register');
 Route::post('/store', [RegisterController::class,'store'])->name('modeller.store');
+
+Route::get('/display', [ModellerController::class, 'add']);
+Route::post('/display', [ModellerController::class, 'create']);
+
+Route::prefix('display')->group(function () {//以下を追記
+    Route::get('/', [BookController::class, 'index']);
+    Route::get('/add', [BookController::class, 'add']);
+    Route::post('/add', [BookController::class, 'create']);
+});
+
+Route::get('/relation', [ModellerController::class,'relate']);
+
