@@ -40,4 +40,4 @@ Route::prefix('display')->group(function () {//以下を追記
 });
 
 Route::get('/relation', [ModellerController::class,'relate']);
-
+Route::get('/verror', [TestController::class, 'verror']);

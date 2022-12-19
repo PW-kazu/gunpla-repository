@@ -36,6 +36,14 @@
 </style>
 <body>
   <h1>会員登録</h1>
+  <p>{{$txt}}</p>
+   @if (count($errors) > 0)
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{$error}}</li>
+    @endforeach
+  </ul>
+   @endif
   <form action="{{ route('modeller.store')}}">
     @csrf
     <div class="form-group">

@@ -37,4 +37,15 @@ class RegisterRequest extends FormRequest
             'tel'=> 'required',
         ];
     }
+
+    protected function getRedirectUrl()
+    {
+         return 'verror';
+    }
+
+    public function verror()
+  {
+    return view('verror');
+  }
+
 }
